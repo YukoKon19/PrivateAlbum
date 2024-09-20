@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            margin: 0;
+        }
+
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Increased min width to 300px */
+            gap: 20px; /* Increased gap between images */
+            padding: 20px;
+        }
+
+        .gallery-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-container img:hover {
+            transform: scale(1.05); /* Adds zoom effect on hover */
+        }
+
+        /* Responsive for small screens */
+        @media (max-width: 600px) {
+            .gallery-container {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Set smaller images for mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>First Month Part 2</h1>
+    <div class="gallery-container">
+        <img src="D:\Pictures\Saved Pictures\image11.jpg" alt="Image 1">
+        <img src="D:\Pictures\Saved Pictures\image12.jpg" alt="Image 2">
+        <img src="D:\Pictures\Saved Pictures\image13.jpg" alt="Image 3">
+        <img src="D:\Pictures\Saved Pictures\image14.jpg" alt="Image 4">
+        <img src="D:\Pictures\Saved Pictures\image15.jpg" alt="Image 5">
+        <img src="D:\Pictures\Saved Pictures\image16.jpg" alt="Image 6">
+        <img src="D:\Pictures\Saved Pictures\image17.jpg" alt="Image 7">
+        <img src="D:\Pictures\Saved Pictures\image18.jpg" alt="Image 8">
+        <img src="D:\Pictures\Saved Pictures\image19.jpg" alt="Image 9">
+        <img src="D:\Pictures\Saved Pictures\image20.jpg" alt="Image 10">
+    </div>
+</body>
+</html>

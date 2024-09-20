@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Gallery with Text Box</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://e0.pxfuel.com/wallpapers/941/932/desktop-wallpaper-cleaned-up-and-upscaled-the-title-screen-perfect-as-a-fate-grand-order.jpg'); /* Custom background image */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Makes the background stay fixed while scrolling */
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            margin: 0;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .text-box-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
+        .text-box-container textarea {
+            width: 80%;
+            height: 150px;
+            font-size: 18px;
+            padding: 15px;
+            border-radius: 10px;
+            border: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            outline: none;
+            resize: none;
+        }
+
+        .video-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* Larger video sizes */
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .video-gallery video {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Responsive video gallery for smaller screens */
+        @media (max-width: 600px) {
+            .video-gallery {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Smaller video sizes for mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>A Note Before We Move On</h1>
+
+    <div class="content">
+        <!-- Text Box Section -->
+        <div class="text-box-container">
+            <textarea placeholder="There has been many monthly anniversaries which haven't been recorded yet and its cause we end up watching movie like last month's or me listening to Bria vent to me or just...trying to understand one another, lost in the moment. Yes its true we had one anniversary, during the time Bria separated from mom that made us very distant for a week or more which hurt us both and were almost on the verge of separation but Naru kept us together and I thank him for that. My point is that throughout all these anniversaries, we never gave up on one another. Call it divine intervention or not, we never gave up on one another and now we are 8 months in and i can't help but thank God for gifting me a woman like her. I love you Bria and this is my special gift to you for this anniversary, a navigational album that can be updated infinite times to store thousand of stories of our life yet to come."></textarea>
+        </div>
+
+        <!-- Video Gallery Section -->
+        <div class="video-gallery">
+            <video controls>
+                <source src="C:\Users\deiez\Videos\VID_66281207_042914_902.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <video controls>
+                <source src="C:\Users\deiez\Videos\VID_66290305_204321_618.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+</body>
+</html>

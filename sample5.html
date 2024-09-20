@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3x3 Grid with Background and HTML Popups</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url('https://cdn.wallpapersafari.com/24/81/7PXVBT.jpg'); /* Replace with your background image */
+            background-size: cover;
+            background-position: center;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 100px);
+            grid-gap: 10px;
+        }
+        .grid-item {
+            width: 100px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+            border: 2px solid black;
+            background-color: rgba(255, 255, 255, 0.8);
+            cursor: pointer;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="grid">
+    <div class="grid-item" data-html="final1.html">1</div>
+    <div class="grid-item" data-html="final2.html">2</div>
+    <div class="grid-item" data-html="final3.html">3</div>
+    <div class="grid-item" data-html="final4.html">4</div>
+    <div class="grid-item" data-html="final5.html">5</div>
+    <div class="grid-item" data-html="final6.html">6</div>
+    <div class="grid-item" data-html="page7.html">7</div>
+    <div class="grid-item" data-html="page8.html">8</div>
+    <div class="grid-item" data-html="page9.html">9</div>
+</div>
+
+<script>
+    document.querySelectorAll('.grid-item').forEach(item => {
+        item.addEventListener('click', function() {
+            const htmlFile = this.getAttribute('data-html');
+            window.location.href = htmlFile; // Opens the specified HTML file
+        });
+    });
+</script>
+
+</body>
+</html>
